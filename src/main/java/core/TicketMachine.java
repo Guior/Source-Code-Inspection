@@ -41,8 +41,11 @@ public class TicketMachine {
 	}
 
 	public String imprimir() throws SaldoInsuficienteException {
+	    // to-do: retirar tratamento de saldo insuficiente
+	    // do metodo de impressao
+	    // re-adicionar string
 		if (saldo < valor) {
-			throw new SaldoInsuficienteException();
+			throw new SaldoInsuficienteException("Saldo insuficiente da maquina;");
 		}
 	}
 }
