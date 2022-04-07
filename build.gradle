@@ -3,4 +3,10 @@ apply plugin: 'application'
 
 applicationDefaultJvmArgs = ["-ea"]
 
+dependencies {
+	     testImplementation files('/usr/share/java/junit-4.13.2.jar', '/usr/share/java/hamcrest-core.jar')
+}
 
+test {
+     useJUnit()
+}
