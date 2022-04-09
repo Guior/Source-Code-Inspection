@@ -27,6 +27,6 @@ public class TicketMachineTest
 
 		int saldo_atual = maquina_teste.getSaldo();
 
-		assertEquals (99, saldo_atual);
+		assertEquals (100, saldo_atual);
     }
 }
