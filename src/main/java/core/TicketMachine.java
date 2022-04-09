@@ -36,11 +36,11 @@ public class TicketMachine {
 		return saldo;
 	}
 
-	public TrocoIterator getTroco() {
-		return null;
-	}
+	// public TrocoIterator getTroco() {
+	// 	return null;
+	// }
 
-	public String imprimir() throws SaldoInsuficienteException {
+	public void imprimir() throws SaldoInsuficienteException {
 	    // to-do: retirar tratamento de saldo insuficiente
 	    // do metodo de impressao
 	    // re-adicionar string

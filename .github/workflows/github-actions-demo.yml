@@ -1,0 +1,10 @@
+name: GitHub Actions Demo
+on: [push]
+jobs:
+  Run-tests:
+    runs-on: arch
+    steps:
+      - run: echo "Evento ${{ github.event_name }} acionado."
+	  - run: echo "Comando gradle test será acionado."
+	  - run: gradle test
+	  - run: echo "Comando gradle test executado."
