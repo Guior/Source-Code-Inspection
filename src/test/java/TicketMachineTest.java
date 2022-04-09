@@ -2,7 +2,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import core.TicketMachine;
+import src.main.java.core.TicketMachine;
 
 public class TicketMachineTest
 {
