@@ -18,15 +18,20 @@ Os métodos considerados relevantes são ~inserir~, ~imprimir~ e ~getTroco~.
 - Valor inserido :: 432
 - Retorno esperado (do ~getSaldo~)  :: 432
 
+** Inserindo valor inteiro negativo
+
+- Valor inserido :: -100
+- Retorno esperado (do ~getSaldo~)  :: 0
+
 ** Inserindo valor inteiro ímpar
 
-- Valor inserido :: 433
+- Valor inserido :: 3
 - Retorno esperado (do ~getSaldo~)  :: ~PapelMoedaInvalidaException~
 
 ** Inserindo múltiplas vezes
 
-- Valores inseridos :: 300, 50, 30, 20, 900, 45, 2, 25
-- Retorno esperado (do ~getSaldo~)  :: 1372
+- Valores inseridos :: 100, 50, 20, 100, 2, 10, 5, 2, 50
+- Retorno esperado (do ~getSaldo~)  :: 339
 
 * Troco
 
