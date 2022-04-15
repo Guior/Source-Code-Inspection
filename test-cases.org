@@ -16,7 +16,7 @@ Os métodos considerados relevantes são ~inserir~, ~imprimir~ e ~getTroco~.
 ** Inserindo valor inteiro composto
 
 - Valor inserido :: 432
-- Retorno esperado (do ~getSaldo~)  :: 432
+- Retorno esperado :: ~PapelMoedaInvalidaException~
 
 ** Inserindo valor inteiro negativo
 
@@ -26,7 +26,7 @@ Os métodos considerados relevantes são ~inserir~, ~imprimir~ e ~getTroco~.
 ** Inserindo valor inteiro ímpar
 
 - Valor inserido :: 3
-- Retorno esperado (do ~getSaldo~)  :: ~PapelMoedaInvalidaException~
+- Retorno esperado :: ~PapelMoedaInvalidaException~
 
 ** Inserindo múltiplas vezes
 
