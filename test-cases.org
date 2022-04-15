@@ -1,0 +1,34 @@
+#+title: Casos de teste
+* Ticket Machine
+
+Os métodos considerados relevantes são ~inserir~, ~imprimir~ e ~getTroco~.
+
+** Inserindo valor zero                                            :inserir:
+
+- Valor inserido :: 0
+- Retorno esperado (do ~getSaldo~)  :: 0
+  
+** Inserindo valor inteiro "comum"
+
+- Valor inserido :: 100
+- Retorno esperado (do ~getSaldo~)  :: 100
+
+** Inserindo valor inteiro composto
+
+- Valor inserido :: 432
+- Retorno esperado (do ~getSaldo~)  :: 432
+
+** Inserindo valor inteiro ímpar
+
+- Valor inserido :: 433
+- Retorno esperado (do ~getSaldo~)  :: ~PapelMoedaInvalidaException~
+
+** Inserindo múltiplas vezes
+
+- Valores inseridos :: 300, 50, 30, 20, 900, 45, 2, 25
+- Retorno esperado (do ~getSaldo~)  :: 1372
+
+* Troco
+
+* Papel Moeda
+
