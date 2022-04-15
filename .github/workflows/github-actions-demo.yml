@@ -1,10 +1,17 @@
-name: GitHub Actions Demo
-on: [push]
+name: Test-all
+on: push
 jobs:
-  Run-tests:
-    runs-on: arch
-    steps:
-      - run: echo "Evento ${{ github.event_name }} acionado."
-	  - run: echo "Comando gradle test será acionado."
-	  - run: gradle test
-	  - run: echo "Comando gradle test executado."
+	Test-all:
+	   name: Run all tests
+	   runs-on: ubuntu-latest
+	   steps:
+		- uses: actions/checkout@v3
+		- name: Setting up JDK 11
+		  uses: actions/setup-java@v3
+		  with:
+		    java-version: '11'
+		    distribution: 'temurin'
+		- name: Testing with gradle
+		  uses: gradle/gradle-build-action@0d13054264b0bb894ded474f08ebb30921341cee
+		  with:
+		    arguments: clean test
