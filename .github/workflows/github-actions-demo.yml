@@ -9,8 +9,8 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: '11'
-          distribution: 'temurin'
+          distribution: 'adopt'
       - name: Testing with gradle
-        uses: gradle/gradle-build-action@0d13054264b0bb894ded474f08ebb30921341cee
-        with:
-          arguments: clean test
+        uses: gradle/gradle-build-action@v2
+      - run: ./gradlew clean test
+
