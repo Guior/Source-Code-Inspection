@@ -1,8 +1,7 @@
 name: Test-all
 on: push
 jobs:
-	Test-all:
-	   name: Run all tests
+	test-all:
 	   runs-on: ubuntu-latest
 	   steps:
 		- uses: actions/checkout@v3
