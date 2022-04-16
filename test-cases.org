@@ -8,27 +8,27 @@ Os métodos considerados relevantes são ~inserir~, ~imprimir~ e ~getTroco~.
 - Valor inserido :: 0
 - Retorno esperado (do ~getSaldo~)  :: 0
   
-** Inserindo valor inteiro "comum"
+** Inserindo valor inteiro "comum"                                 :inserir:
 
 - Valor inserido :: 100
 - Retorno esperado (do ~getSaldo~)  :: 100
 
-** Inserindo valor inteiro composto
+** Inserindo valor inteiro composto                                :inserir:
 
 - Valor inserido :: 432
 - Retorno esperado :: ~PapelMoedaInvalidaException~
 
-** Inserindo valor inteiro negativo
+** Inserindo valor inteiro negativo                                :inserir:
 
 - Valor inserido :: -100
 - Retorno esperado (do ~getSaldo~)  :: 0
 
-** Inserindo valor inteiro ímpar
+** Inserindo valor inteiro ímpar                                   :inserir:
 
 - Valor inserido :: 3
 - Retorno esperado :: ~PapelMoedaInvalidaException~
 
-** Inserindo múltiplas vezes
+** Inserindo múltiplas vezes                                       :inserir:
 
 - Valores inseridos :: 100, 50, 20, 100, 2, 10, 5, 2, 50
 - Retorno esperado (do ~getSaldo~)  :: 339
@@ -37,3 +37,28 @@ Os métodos considerados relevantes são ~inserir~, ~imprimir~ e ~getTroco~.
 
 * Papel Moeda
 
+Simples classe que representa um bolo de papel moeda de determinado valor, e.g. ~100 (1x 100), 200, (2x100), 4 (2x2), 90 (9x10)~, produzido em ordem decrescente pelas classes que a importam.
+
+
+Pelas regras determinadas, existem valores pré-definidos para os papeis moeda, contanto, o objetivo dos testes unitários nesse caso seria testar as funcionalidades da classe.
+
+** Instanciando um único papel moeda                            :PapelMoeda:
+
+- Valores inseridos :: ~valor <- 100~, ~quantidade <- 1~
+- Retorno esperado :: ~getValor -> 100~, ~getQuantidade -> 1~
+  
+** Instanciando um único papel moeda com valor negativo         :PapelMoeda:
+
+- Valores inseridos :: ~valor <- -1~, ~quantidade <- 1~
+- Retorno esperado :: Alguma Exception, não há sentido em criar um papel moeda zerado.
+  
+** Instanciando vários papeis moeda                             :PapelMoeda:
+
+- Valores inseridos :: ~valor <- 10~, ~quantidade <- 90~
+- Retorno esperado :: ~getValor -> 10, ~getQuantidade -> 90~
+
+** Instanciando vários papeis moeda com valor negativo          :PapelMoeda:
+
+- Valores inseridos :: ~valor <- -1~, ~quantidade <- 90~
+- Retorno esperado :: Alguma Exception, não há sentido em criar um papel moeda zerado.
+  
